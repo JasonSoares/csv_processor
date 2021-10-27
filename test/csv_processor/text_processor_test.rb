@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require_relative "../../lib/csv_processor/text_processor"
+require "csv_processor/text_processor"
 
 class TextProcessorTest < Minitest::Test
   def test_blanks_are_stripped_from_sides
