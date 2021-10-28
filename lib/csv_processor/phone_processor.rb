@@ -5,6 +5,7 @@ class PhoneProcessor
     normalized_value = normalize(value)
     parsed_value = parse(normalized_value)
     cleaned_value = convert_to_e164(parsed_value)
+    cleaned_value
   end
 
   private_class_method def self.normalize(value)
