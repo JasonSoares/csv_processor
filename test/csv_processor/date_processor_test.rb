@@ -8,6 +8,7 @@ class DateProcessorTest < Minitest::Test
     assert_equal("2021-01-01", DateProcessor.call("1/1/21"))
     assert_equal("2021-01-02", DateProcessor.call("1-2-21"))
     assert_equal("2021-01-03", DateProcessor.call("2021-1-3"))
+    assert_equal("1988-01-01", DateProcessor.call("1/1/1988"))
   end
 
   def test_valid_date_strings_wtih_invalid_dates_return_nil
