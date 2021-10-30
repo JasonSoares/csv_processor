@@ -16,5 +16,6 @@ end
 
 # Get a file path relative to the test/data directory
 def get_data_file_path(file_name)
-  File.expand_path("../data/#{file_name}", __FILE__)
+  base = File.dirname __FILE__
+  File.join(base, "data", file_name)
 end
