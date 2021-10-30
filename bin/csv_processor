@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/csv_processor'
+require_relative '../lib/csv_processor/reporter'
+
+# TODO: can improve with OptionParser
+input_file = ARGV[0] || File.expand_path("data/input.csv")
+output_file = ARGV[1] || File.expand_path("data/output.csv")
+report_file = ARGV[2] || File.expand_path("data/report.txt")
+
+reporter = Reporter.new(input_file, output_file)
+
+processor = CsvProcessor.new(input_file, output_file, reporter)
+processor.call
+
+reporter.finalize(report_file)
